@@ -25,8 +25,9 @@ timoth({ nomCom: "menu2", categorie: "Menu" }, async (dest, zk, commandeOptions)
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 const randomAudio = 'https://files.catbox.moe/sqrx9g.mp3';
-const img = 'https://files.catbox.moe/3zf823.jpg';
+const img = 'https://files.catbox.moe/7n8oyx.jpg';
 const imgs = 'https://files.catbox.moe/ncan7n.jpg';
+const randomAudio = 'https://files.catbox.moe/sqrx9g.mp3'; 
   let infoMsg =  `
 ╭▱▰「 *${s.BOT}* 」▱▰❂
 ┃⊛╭▰▱▰▱▰▱▰▱➻
