@@ -1,28 +1,27 @@
 
-
 const { timoth } = require("../timnasa/timoth")
-//const { getGroupe } = require("../fbase/groupe")
+//const { getGroupe } = require("../bdd/groupe")
 const { Sticker, StickerTypes } = require('wa-sticker-formatter');
-const {ajouterOuMettreAJourJid,mettreAJourAction,verifierEtatJid} = require("../fbase/antilien")
-const {atbajouterOuMettreAJourJid,atbverifierEtatJid} = require("../fbase/antibot")
+const {ajouterOuMettreAJourJid,mettreAJourAction,verifierEtatJid} = require("../bdd/antilien")
+const {atbajouterOuMettreAJourJid,atbverifierEtatJid} = require("../bdd/antibot")
 const { search, download } = require("aptoide-scraper");
 const fs = require("fs-extra");
 const conf = require("../set");
 const { default: axios } = require('axios');
-//const { uploadImageToImgur } = require('../timnasa/imgur');
+//const { uploadImageToImgur } = require('../framework/imgur');
 
 
 
 
 
-timoth({ nomCom: "tagall", categorie: 'Group', reaction: "📯" }, async (dest, zk, commandeOptions) => {
+timoth({ nomCom: "tagall", categorie: 'Group', reaction: "🪰" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 
  
 
-  if (!verifGroupe) { repondre("⚠️ uuuuhh Dr this command is reserved for groups ❌"); return; }
+  if (!verifGroupe) { repondre("thís cσmmαnd ís rєsєrvєd fσr grσups"); return; }
   if (!arg || arg === ' ') {
   mess = 'Aucun Message'
   } else {
@@ -30,26 +29,16 @@ timoth({ nomCom: "tagall", categorie: 'Group', reaction: "📯" }, async (dest, 
   } ;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   var tag = ""; 
-  tag += `========================\n  
-        🌟 *TIMNASA-TMD*𝕋𝔸𝔾𝔾𝔼𝔻 🌟
-========================\n
-👥 Group : ${nomGroupe} 🚀 
-👤 Autor : *${nomAuteurMessage}* 👋 
-📜 Message : *${mess}* 📝
-========================\n
-\n
-
+  tag +=`
+ *Group* : *${nomGroupe}* 
+ *Message* : *no message*\n
 ` ;
-
-
-
-
-  let emoji = ['😇', '👀', '😮‍💨', '👋', '✌️', '😇', '⚙️', '💪', '🎊', '✨', '🙏🏿', '⛔️', '$','😎','🤔','⚡','🚜']
+  let emoji = ['> Holla✌️']
   let random = Math.floor(Math.random() * (emoji.length - 1))
 
 
   for (const membre of membresGroupe) {
-    tag += `${emoji[random]}      @${membre.id.split("@")[0]}\n`
+    tag += `${emoji[random]} @${membre.id.split("@")[0]}\n`
   }
 
  
@@ -62,7 +51,7 @@ timoth({ nomCom: "tagall", categorie: 'Group', reaction: "📯" }, async (dest, 
 });
 
 
-timoth({ nomCom: "link", categorie: 'Group', reaction: "🚜" }, async (dest, zk, commandeOptions) => {
+timoth({ nomCom: "link", categorie: 'Group', reaction: "🖇️" }, async (dest, zk, commandeOptions) => {
   const { repondre, nomGroupe, nomAuteurMessage, verifGroupe } = commandeOptions;
   if (!verifGroupe) { repondre("wait bro , you want the link to my dm?"); return; };
 
@@ -72,16 +61,16 @@ timoth({ nomCom: "link", categorie: 'Group', reaction: "🚜" }, async (dest, zk
 
   let mess = `hello ${nomAuteurMessage} , here is the group link for ${nomGroupe} \n
 
-Grp link :${lien} \n\n★𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝚋𝚢  TIMNASA-TMD 𝚃𝚣`
+Group link :${lien} \n\n> ©𝚃𝙸𝙼𝙽𝙰𝚂𝙰_𝚃𝙴𝙲𝙷`
   repondre(mess)
 
 
 });
 /** *nommer un membre comme admin */
-timoth({ nomCom: "promote", categorie: 'Group', reaction: "💐" }, async (dest, zk, commandeOptions) => {
+timoth({ nomCom: "promote", categorie: 'Group', reaction: "🫂" }, async (dest, zk, commandeOptions) => {
   let { repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
-  if (!verifGroupe) { return repondre("For groups only"); }
+  if (!verifGroupe) { return repondre("fσr grσups σnlч"); }
 
 
   const verifMember = (user) => {
@@ -114,7 +103,7 @@ timoth({ nomCom: "promote", categorie: 'Group', reaction: "💐" }, async (dest,
   let autAdmin = verifGroupe ? a.includes(auteurMessage) : false;
   zkad = verifGroupe ? a.includes(idBot) : false;
   try {
-    // repondre(veriftimothAdmin)
+    // repondre(verifZokouAdmin)
 
     if (autAdmin || superUser) {
       if (msgRepondu) {
@@ -122,12 +111,12 @@ timoth({ nomCom: "promote", categorie: 'Group', reaction: "💐" }, async (dest,
           if (membre) {
             if (admin == false) {
               var txt = `🎊🎊🎊  @${auteurMsgRepondu.split("@")[0]} rose in rank.\n
-                      he/she has been Promote To Admin.`
+                      he/she has been named group administrator.`
               await zk.groupParticipantsUpdate(dest, [auteurMsgRepondu], "promote");
               zk.sendMessage(dest, { text: txt, mentions: [auteurMsgRepondu] })
             } else { return repondre("This member is already an administrator of the group.") }
 
-          } else { return repondre("This user is not part of the group."); }
+          } else { return repondre("thís usєr ís nσt pαrt σf thє grσup."); }
         }
         else { return repondre("Sorry, I cannot perform this action because I am not an administrator of the group.") }
 
@@ -140,10 +129,10 @@ timoth({ nomCom: "promote", categorie: 'Group', reaction: "💐" }, async (dest,
 //fin nommer
 /** ***demettre */
 
-timoth({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
+timoth({ nomCom: "demote", categorie: 'Group', reaction: "😨" }, async (dest, zk, commandeOptions) => {
   let { repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
-  if (!verifGroupe) { return repondre("For groups only"); }
+  if (!verifGroupe) { return repondre("fσr grσups σnlч"); }
 
 
   const verifMember = (user) => {
@@ -176,7 +165,7 @@ timoth({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, as
   let autAdmin = verifGroupe ? a.includes(auteurMessage) : false;
   zkad = verifGroupe ? a.includes(idBot) : false;
   try {
-    // repondre(veriftimothAdmin)
+    // repondre(verifZokouAdmin)
 
     if (autAdmin || superUser) {
       if (msgRepondu) {
@@ -192,9 +181,9 @@ timoth({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, as
               zk.sendMessage(dest, { text: txt, mentions: [auteurMsgRepondu] })
             }
 
-          } else { return repondre("This user is not part of the group."); }
+          } else { return repondre("thís usєr ís nσt pαrt σf thє grσup."); }
         }
-        else { return repondre("Sorry I cannot perform this action because I am not an administrator of the group.") }
+        else { return repondre("sσrrч αm nσt αn αdmínístrαtσr σf thє grσup.") }
 
       } else { repondre("please tag the member to be removed"); }
     } else { return repondre("Sorry I cannot perform this action because you are not an administrator of the group.") }
@@ -206,10 +195,10 @@ timoth({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, as
 
 /** ***fin démettre****  **/
 /** **retirer** */
-timoth({ nomCom: "remove", categorie: 'Group', reaction: "😱" }, async (dest, zk, commandeOptions) => {
+timoth({ nomCom: "remove", categorie: 'Group', reaction: "😰" }, async (dest, zk, commandeOptions) => {
   let { repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, nomAuteurMessage, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
-  if (!verifGroupe) { return repondre("for groups only"); }
+  if (!verifGroupe) { return repondre("fσr grσups σnlч"); }
 
 
   const verifMember = (user) => {
@@ -242,7 +231,7 @@ timoth({ nomCom: "remove", categorie: 'Group', reaction: "😱" }, async (dest, 
   let autAdmin = verifGroupe ? a.includes(auteurMessage) : false;
   zkad = verifGroupe ? a.includes(idBot) : false;
   try {
-    // repondre(veriftimothAdmin)
+    // repondre(verifZokouAdmin)
 
     if (autAdmin || superUser) {
       if (msgRepondu) {
@@ -251,7 +240,7 @@ timoth({ nomCom: "remove", categorie: 'Group', reaction: "😱" }, async (dest, 
             if (admin == false) {
               const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif"
               var sticker = new Sticker(gifLink, {
-                pack: 'TMNASA-TMD', // The pack name
+                pack: 'Zokou-Md', // The pack name
                 author: nomAuteurMessage, // The author name
                 type: StickerTypes.FULL, // The sticker type
                 categories: ['🤩', '🎉'], // The sticker category
@@ -343,7 +332,7 @@ timoth({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions)
 
     let mess = {
       image: { url: ppgroup },
-      caption:  `*━━━━『𝙶𝚁𝙾𝚄𝙿 𝙸𝙽𝙵𝙾』━━━━*\n\n*🎐Name:* ${info.subject}\n\n*🔩Group's ID:* ${dest}\n\n*🔍Desc:* \n\n${info.desc}`
+      caption:  `*━━━━『Group Info』━━━━*\n\n*🎐Name:* ${info.subject}\n\n*🔩Group's ID:* ${dest}\n\n*🔍Desc:* \n\n${info.desc}`
     }
 
 
@@ -422,7 +411,7 @@ timoth({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions)
 
  //------------------------------------antibot-------------------------------
 
- timoth({ nomCom: "antibot", categorie: 'Group', reaction: "👾" }, async (dest, zk, commandeOptions) => {
+ timoth({ nomCom: "antibot", categorie: 'Group', reaction: "🪰" }, async (dest, zk, commandeOptions) => {
 
 
   var { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
@@ -430,7 +419,7 @@ timoth({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions)
 
   
   if (!verifGroupe) {
-    return repondre("*for groups only*");
+    return repondre("*fσr grσups σnlч*");
   }
   
   if( superUser || verifAdmin) {
@@ -492,7 +481,7 @@ timoth({ nomCom: "group", categorie: 'Group' }, async (dest, zk, commandeOptions
 
   const { repondre, verifGroupe, verifAdmin, superUser, arg } = commandeOptions;
 
-  if (!verifGroupe) { repondre("order reserved for group only"); return };
+  if (!verifGroupe) { repondre("σrdєr rєsєrvєd fσr grσup σnlч"); return };
   if (superUser || verifAdmin) {
 
     if (!arg[0]) { repondre('Instructions:\n\nType group open or close'); return; }
@@ -504,14 +493,14 @@ timoth({ nomCom: "group", categorie: 'Group' }, async (dest, zk, commandeOptions
         break;
       case "close":
         await zk.groupSettingUpdate(dest, 'announcement');
-        repondre('Group close successfully');
+        repondre('grσup lσck succєssfullч 🔒');
         break;
-      default: repondre("Please don't invent an option")
+      default: repondre("plєαsє dσn't ínvєnt αn σptíσn")
     }
 
     
   } else {
-    repondre("order reserved for the administratorr");
+    repondre("σrdєr rєsєrvєd fσr thє αdmínístrαtσrr");
     return;
   }
  
@@ -521,9 +510,9 @@ timoth({ nomCom: "group", categorie: 'Group' }, async (dest, zk, commandeOptions
 timoth({ nomCom: "left", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
   const { repondre, verifGroupe, superUser } = commandeOptions;
-  if (!verifGroupe) { repondre("order reserved for group only"); return };
+  if (!verifGroupe) { repondre("σrdєr rєsєrvєd fσr grσup σnlч"); return };
   if (!superUser) {
-    repondre("command reserved for the bot owner");
+    repondre("cσmmαnd rєsєrvєd fσr thє вσt σwnєr");
     return;
   }
   await repondre('sayonnara') ;
@@ -595,220 +584,6 @@ timoth({ nomCom: "gpp", categorie: 'Group' }, async (dest, zk, commandeOptions) 
 });
 
 /////////////
-timoth({nomCom:"tag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeOptions)=>{
-
-  const {repondre,msgRepondu,verifGroupe,arg ,verifAdmin , superUser}=commandeOptions;
-
-  if(!verifGroupe)  { repondre('This command is only allowed in groups.')} ;
-  if (verifAdmin || superUser) { 
-
-  let metadata = await zk.groupMetadata(dest) ;
-
-  //console.log(metadata.participants)
- let tag = [] ;
-  for (const participant of metadata.participants ) {
-
-      tag.push(participant.id) ;
-  }
-  //console.log(tag)
-
-    if(msgRepondu) {
-      console.log(msgRepondu)
-      let msg ;
-
-      if (msgRepondu.imageMessage) {
-
-        
-
-     let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage) ;
-     // console.log(msgRepondu) ;
-     msg = {
-
-       image : { url : media } ,
-       caption : msgRepondu.imageMessage.caption,
-       mentions :  tag
-       
-     }
-    
-
-      } else if (msgRepondu.videoMessage) {
-
-        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.videoMessage) ;
-
-        msg = {
-
-          video : { url : media } ,
-          caption : msgRepondu.videoMessage.caption,
-          mentions :  tag
-          
-        }
-
-      } else if (msgRepondu.audioMessage) {
-    
-        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.audioMessage) ;
-       
-        msg = {
-   
-          audio : { url : media } ,
-          mimetype:'audio/mp4',
-          mentions :  tag
-           }     
-        
-      } else if (msgRepondu.stickerMessage) {
-
-    
-        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
-
-        let stickerMess = new Sticker(media, {
-          pack: 'LUCKY-MD',
-          type: StickerTypes.CROPPED,
-          categories: ["🤩", "🎉"],
-          id: "12345",
-          quality: 70,
-          background: "transparent",
-        });
-        const stickerBuffer2 = await stickerMess.toBuffer();
-       
-        msg = { sticker: stickerBuffer2 , mentions : tag}
-
-
-      }  else {
-          msg = {
-             text : msgRepondu.conversation,
-             mentions : tag
-          }
-      }
-
-    zk.sendMessage(dest,msg)
-
-    } else {
-
-        if(!arg || !arg[0]) { repondre('Enter the text to announce or mention the message to announce');
-        ; return} ;
-
-      zk.sendMessage(
-         dest,
-         {
-          text : arg.join(' ') ,
-          mentions : tag
-         }     
-      )
-    }
-
-} else {
-  repondre('Command reserved for administrators.')
-}
-
-});
-
-/////////////
-timoth({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeOptions)=>{
-
-  const {repondre,msgRepondu,verifGroupe,arg ,verifAdmin , superUser}=commandeOptions;
-
-  if(!verifGroupe)  { repondre('This command is only allowed in groups.')} ;
-  if (verifAdmin || superUser) { 
-
-  let metadata = await zk.groupMetadata(dest) ;
-
-  //console.log(metadata.participants)
- let tag = [] ;
-  for (const participant of metadata.participants ) {
-
-      tag.push(participant.id) ;
-  }
-  //console.log(tag)
-
-    if(msgRepondu) {
-      console.log(msgRepondu)
-      let msg ;
-
-      if (msgRepondu.imageMessage) {
-
-        
-
-     let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage) ;
-     // console.log(msgRepondu) ;
-     msg = {
-
-       image : { url : media } ,
-       caption : msgRepondu.imageMessage.caption,
-       mentions :  tag
-       
-     }
-    
-
-      } else if (msgRepondu.videoMessage) {
-
-        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.videoMessage) ;
-
-        msg = {
-
-          video : { url : media } ,
-          caption : msgRepondu.videoMessage.caption,
-          mentions :  tag
-          
-        }
-
-      } else if (msgRepondu.audioMessage) {
-    
-        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.audioMessage) ;
-       
-        msg = {
-   
-          audio : { url : media } ,
-          mimetype:'audio/mp4',
-          mentions :  tag
-           }     
-        
-      } else if (msgRepondu.stickerMessage) {
-
-    
-        let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
-
-        let stickerMess = new Sticker(media, {
-          pack: 'LUCKY-MD',
-          type: StickerTypes.CROPPED,
-          categories: ["🤩", "🎉"],
-          id: "12345",
-          quality: 70,
-          background: "transparent",
-        });
-        const stickerBuffer2 = await stickerMess.toBuffer();
-       
-        msg = { sticker: stickerBuffer2 , mentions : tag}
-
-
-      }  else {
-          msg = {
-             text : msgRepondu.conversation,
-             mentions : tag
-          }
-      }
-
-    zk.sendMessage(dest,msg)
-
-    } else {
-
-        if(!arg || !arg[0]) { repondre('Enter the text to announce or mention the message to announce');
-        ; return} ;
-
-      zk.sendMessage(
-         dest,
-         {
-          text : arg.join(' ') ,
-          mentions : tag
-         }     
-      )
-    }
-
-} else {
-  repondre('Command reserved for administrators.')
-}
-
-});
-
-/////////////
 timoth({nomCom:"htag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeOptions)=>{
 
   const {repondre,msgRepondu,verifGroupe,arg ,verifAdmin , superUser}=commandeOptions;
@@ -874,7 +649,7 @@ timoth({nomCom:"htag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeO
         let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
 
         let stickerMess = new Sticker(media, {
-          pack: 'TIMNASA-TMD',
+          pack: 'Timnasa-md',
           type: StickerTypes.CROPPED,
           categories: ["🤩", "🎉"],
           id: "12345",
@@ -916,7 +691,7 @@ timoth({nomCom:"htag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeO
 });
 
 
-timoth({ nomCom: "app", reaction: "🚜", categorie: "Search" }, async (dest, zk, commandeOptions) => {
+timoth({ nomCom: "apk", reaction: "✨", categorie: "Recherche" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -940,7 +715,7 @@ timoth({ nomCom: "app", reaction: "🚜", categorie: "Search" }, async (dest, zk
 
     const downloadLink = appData.dllink;
     const captionText =
-      "『 *TIMNASA-TMD Application* 』\n\n*Name :* " + appData.name +
+      "『 *Timnasa-Md Application* 』\n\n*Name :* " + appData.name +
       "\n*Id :* " + appData["package"] +
       "\n*Last Update :* " + appData.lastup +
       "\n*Size :* " + appData.size +
@@ -972,7 +747,7 @@ timoth({ nomCom: "app", reaction: "🚜", categorie: "Search" }, async (dest, zk
     fs.unlinkSync(filePath);
   } catch (error) {
     console.error('Erreur lors du traitement de la commande apk:', error);
-    repondre("*Error during apk command processing*");
+    repondre("*Timnasa Error during apk command processing*");
   }
 });
 
@@ -982,7 +757,7 @@ timoth({ nomCom: "app", reaction: "🚜", categorie: "Search" }, async (dest, zk
 
 /*******************************  automute && autoummute ***************************/
 
-const cron = require(`../fbase/cron`) ;
+const cron = require(`../bdd/cron`) ;
 
 
 timoth({
@@ -1125,7 +900,7 @@ timoth({
         }) ;
 
       } else {
-          repondre('Please enter a valid time with hour and minute separated by :') ;
+          repondre('Please enter a valid time with hour and minute separated by timnasa :') ;
       }
 
 
@@ -1139,11 +914,11 @@ timoth({
   categorie : 'Group'
 } , async (dest,zk,commandeOptions) => {
 
-  const {arg , repondre , verifAdmin , superUser , veriftimothAdmin } = commandeOptions ;
+  const {arg , repondre , verifAdmin , superUser , verifZokouAdmin } = commandeOptions ;
 
   if (verifAdmin || superUser) {
 
-    if(!veriftimothAdmin){ repondre('You need administrative rights to perform this command') ; return ;}
+    if(!verifZokouAdmin){ repondre('You need administrative rights to perform this command') ; return ;}
 
     if (!arg || arg.length == 0) { repondre('Please enter the country code whose members will be removed') ; return ;}
 
@@ -1176,7 +951,7 @@ timoth({
 
   if(!verifAdmin) { repondre('Sorry, you cannot enable NSFW content without being an administrator of the group') ; return}
 
-      let hbd = require('../fbase/hentai') ;
+      let hbd = require('../bdd/hentai') ;
 
     let isHentaiGroupe = await hbd.checkFromHentaiList(dest) ;
 
