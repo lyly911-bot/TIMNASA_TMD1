@@ -27,8 +27,8 @@ timoth({ nomCom: "tagadmin", categorie: 'Group', reaction: "🪰" }, async (dest
   let adminsGroupe = infosGroupe.participants.filter(membre => membre.admin); // Filtering only admins
 
   let tag = `  
-*Group :*ᴛɪᴍɴᴀsᴀ ᴛᴀɢᴀᴅᴍɪɴ ${nomGroupe} 
-*Hey :ᴛɪᴍɴᴀsᴀ ᴛᴀɢᴀᴅᴍɪɴ* ${nomAuteurMessage}* 
+*Group :*${nomGroupe} 
+*Hey :* ${nomAuteurMessage}* 
 *Message :* *${mess}* 
 `;
 
