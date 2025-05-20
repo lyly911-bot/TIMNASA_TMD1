@@ -24,10 +24,8 @@ timoth({ nomCom: "menu", categorie: "Menu" }, async (dest, zk, commandeOptions) 
 // Créer une date et une heure en GMT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
-const randomAudio = 'https://files.catbox.moe/sqrx9g.mp3';
 const img = 'https://files.catbox.moe/7n8oyx.jpg';
 const imgs = 'https://files.catbox.moe/ncan7n.jpg';
-const randomAudio = 'https://files.catbox.moe/sqrx9g.mp3'; 
   let infoMsg =  `
 ╭▱▰「 *${s.BOT}* 」▱▰❂
 ┃⊛╭▰▱▰▱▰▱▰▱➻
@@ -78,6 +76,30 @@ const randomAudio = 'https://files.catbox.moe/sqrx9g.mp3';
                     sourceUrl: "https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31",
                     mediaType: 1,
                     renderLargerThumbnail: true
+                }
+            }
+        });
+        // Send audio with caption
+        await zk.sendMessage(dest, { 
+            audio: { 
+                url: "https://files.catbox.moe/ocyosy.mp3" // Replace with your audio URL
+            }, 
+            mimetype: 'audio/mp4', 
+            ptt: true, // Set to true if you want it as a voice note
+            caption: "TIMNASA TMD SONG",
+            contextInfo: {
+             isForwarded: true,
+             forwardedNewsletterMessageInfo: {
+             newsletterJid: "120363332512801418@newsletter",
+              newsletterName: "timoth",
+               serverMessageId: -1
+               },
+                forwardingScore: 999,
+                externalAdReply: {
+               body: "Timna",
+               thumbnailUrl: imgs,
+               sourceUrl: 'https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31',
+               rendersmallThumbnail: false
                 }
             }
         });
