@@ -1,5 +1,5 @@
 const { timoth } = require("../timnasa/timoth")
-//const { getGroupe } = require("../bdd/groupe")
+const { getGroupe } = require("../bdd/groupe")
 const { Sticker, StickerTypes } = require('wa-sticker-formatter');
 const {ajouterOuMettreAJourJid,mettreAJourAction,verifierEtatJid} = require("../bdd/antilien")
 const {atbajouterOuMettreAJourJid,atbverifierEtatJid} = require("../bdd/antibot")
