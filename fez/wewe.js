@@ -5,7 +5,7 @@ const { writeFile } = require('fs/promises')
 
 // Commande waifu
 timoth({
-  nomCom: "waifu",
+  nomCom: "batakos",
   categorie: "ximega",
   reaction: "😏"
 },
@@ -29,7 +29,7 @@ async (origineMessage, zk, commandeOptions) => {
 
 // Commande neko
 timoth({
-  nomCom: "neko",
+  nomCom: "teko",
   categorie: "ximega",
   reaction: "😺"
 },
@@ -53,7 +53,7 @@ async (origineMessage, zk, commandeOptions) => {
 
 // Commande shinobu
 timoth({
-  nomCom: "shinobu",
+  nomCom: "nobo",
   categorie: "ximega",
   reaction: "🦋"
 },
@@ -76,7 +76,7 @@ async (origineMessage, zk, commandeOptions) => {
 
 // Commande megumin
 timoth({
-  nomCom: "megumin",
+  nomCom: "meguminu",
   categorie: "ximega",
   reaction: "💥"
 },
@@ -128,7 +128,7 @@ async (origineMessage, zk, commandeOptions) => {
 });
 
 
-timoth({nomCom:"couplepp",categorie: "ximega",reaction : "💞"},async(dest,zk,commandeOptions)=>{ const {repondre , ms} = commandeOptions;
+timoth({nomCom:"couplep",categorie: "ximega",reaction : "💞"},async(dest,zk,commandeOptions)=>{ const {repondre , ms} = commandeOptions;
     let api = 'https://smiling-hosiery-bear.cyclic.app/weeb/couplepp'
   try {
      repondre('she/he dont love you :)')
