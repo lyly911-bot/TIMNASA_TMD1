@@ -5,8 +5,8 @@ const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("../bd
 const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("../bdd/banGroup");
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("../bdd/onlyAdmin");
 const {removeSudoNumber,addSudoNumber,issudo} = require("../bdd/sudo");
-//const conf = require("../set");
-//const fs = require('fs');
+const conf = require("../set");
+const fs = require('fs');
 const sleep =  (ms) =>{
   return new Promise((resolve) =>{ setTimeout (resolve, ms)})
   
