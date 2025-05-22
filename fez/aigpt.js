@@ -1,12 +1,12 @@
-const { zokou } = require('../framework/zokou');
-const traduire = require("../framework/traduction") ;
+const { timoth } = require('../timnasa/timoth');
+const traduire = require("../timnasa/traduction") ;
 const { default: axios } = require('axios');
 //const conf = require('../set');
 
 
 
 
-zokou({nomCom:"it",reaction:"📡",categorie:"ai"},async(dest,zk,commandeOptions)=>{
+timoth({nomCom:"timnasa",reaction:"📡",categorie:"ai"},async(dest,zk,commandeOptions)=>{
 
   const {repondre,ms,arg}=commandeOptions;
   
@@ -45,7 +45,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
 
 
 
-  zokou({ nomCom: "gpt2", reaction: "📡", categorie: "ai" }, async (dest, zk, commandeOptions) => {
+  timoth({ nomCom: "gpt", reaction: "📡", categorie: "ai" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
   
     try {
@@ -73,7 +73,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     }
   });
   
-  zokou({ nomCom: "ai2", reaction: "📡", categorie: "ai" }, async (dest, zk, commandeOptions) => {
+  timoth({ nomCom: "ai", reaction: "📡", categorie: "ai" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
   
     try {
@@ -98,7 +98,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   });
 
 
-zokou({ nomCom: "gpt3", reaction: "🤔", categorie: "ai" }, async (dest, zk, commandeOptions) => {
+timnasa({ nomCom: "gpt2", reaction: "🤔", categorie: "ai" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
   
     try {
