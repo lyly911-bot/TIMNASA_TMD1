@@ -1,5 +1,5 @@
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
-const { zokou} = require("../framework/zokou");
+const { timoth} = require("../timnasa/timoth");
 const { downloadMediaMessage } = require('@whiskeysockets/baileys');
 const fs = require("fs-extra");
 const ffmpeg = require("fluent-ffmpeg");
@@ -37,7 +37,7 @@ async function convertToMp3(inputPath, outputPath) {
     });
 }
 
-zokou({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+timoth({ nomCom: "url2", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
     const { msgRepondu, repondre } = commandeOptions;
 
     if (!msgRepondu) {
@@ -88,13 +88,13 @@ zokou({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, asyn
         // Respond with the URL based on media type
         switch (mediaType) {
             case 'image':
-                repondre(`Rahmani url: ${catboxUrl}`);
+                repondre(`𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃 url: ${catboxUrl}`);
                 break;
             case 'video':
-                repondre(`Rahmani url: ${catboxUrl}`);
+                repondre(`𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃 url: ${catboxUrl}`);
                 break;
             case 'audio':
-                repondre(`Rahmani url: ${catboxUrl}`);
+                repondre(`𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃 url: ${catboxUrl}`);
                 break;
             default:
                 repondre('An unknown error occurred.');
@@ -104,4 +104,4 @@ zokou({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, asyn
         console.error('Error while creating your URL:', error);
         repondre('Oops, an error occurred.');
     }
-});
+})

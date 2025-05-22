@@ -1,15 +1,15 @@
 const googleTTS = require('google-tts-api');
-const {zokou} = require("../framework/zokou");
+const {timoth} = require("../timnasa/timoth");
 
 
-zokou( {
+timoth( {
   nomCom : "dit",
- categorie : "User",
+ categorie : "tts",
   reaction : "👄" },
       async(dest,zk, commandeOptions)=> {
  
 const {ms,arg,repondre} = commandeOptions;
-      if (!arg[0]) {repondre("Insert a word");return} ;
+      if (!arg[0]) {repondre("Veiller entrer le mots ou la phrase svp");return} ;
  const mots = arg.join(" ")
 
 const url = googleTTS.getAudioUrl( mots, {
@@ -25,14 +25,14 @@ console.log(url);
 }
 ) ;
 
-zokou( {
+timoth( {
   nomCom : "itta",
- categorie : "User",
+ categorie : "tts",
   reaction : "👄" },
       async(dest,zk, commandeOptions)=> {
  
 const {ms,arg,repondre} = commandeOptions;
-      if (!arg[0]) {repondre("Insert a word");return} ;
+      if (!arg[0]) {repondre("Veiller entrer le mots ou la phrase svp");return} ;
  const mots = arg.join(" ")
 
 const url = googleTTS.getAudioUrl( mots, {
@@ -48,14 +48,14 @@ console.log(url);
 }
 ) ;
 
-zokou( {
+timoth( {
   nomCom : "say",
- categorie : "User",
+ categorie : "tts",
   reaction : "👄" },
       async(dest,zk, commandeOptions)=> {
  
 const {ms,arg,repondre} = commandeOptions;
-      if (!arg[0]) {repondre("Insert a word");return} ;
+      if (!arg[0]) {repondre("Veiller entrer le mots ou la phrase svp");return} ;
  const mots = arg.join(" ")
 
 const url = googleTTS.getAudioUrl( mots, {
@@ -71,4 +71,3 @@ console.log(url);
 }
 ) ;
 
-  

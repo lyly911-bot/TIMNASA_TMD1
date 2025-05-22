@@ -1,5 +1,5 @@
 const { timoth } = require("../timnasa/timoth");
-const fancy = require("../commandes/style");
+const fancy = require("../timnasa/style");
 
 timoth({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, zk, commandeOptions) => {
     const { arg, repondre, prefixe } = commandeOptions;
@@ -8,7 +8,7 @@ timoth({ nomCom: "fancy", categorie: "Fun", reaction: "☑️" }, async (dest, z
 
     try {
         if (id === undefined || text === undefined) {
-            return await repondre(`\nExemple : ${prefixe}fancy timnasa\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('timnasa', fancy));
+            return await repondre(`\nExemple : ${prefixe}fancy 10 timnasa\n` + String.fromCharCode(8206).repeat(4001) + fancy.list('timnasa', fancy));
         }
 
         const selectedStyle = fancy[parseInt(id) - 1];

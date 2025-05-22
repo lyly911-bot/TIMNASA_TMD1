@@ -1,4 +1,4 @@
-const { timoth } = require("../timnasa/timoth");
+const { book } = require("../timnasa/timoth");
 const axios = require("axios");
 
 const config = {

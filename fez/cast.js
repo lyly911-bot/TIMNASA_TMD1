@@ -34,9 +34,9 @@ timoth({ nomCom: "cast2",
                     isForwarded: false,
                     externalAdReply: {
                         title: 'Broadcast by ' + citel.pushName,
-                        body: tlang().title,'TIMNASA-CAST'
+                        body: tlang().title,
                         thumbnail: log0,
-                        mediaUrl: 'https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31',
+                        mediaUrl: '',
                         mediaType: 2,
                         sourceUrl: gurl,
                         showAdAttribution: true,

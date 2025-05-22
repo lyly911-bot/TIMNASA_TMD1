@@ -1,5 +1,5 @@
 
-const { timoth } = require('../timnasa/timoth');
+const { hango } = require('../framework/hango');
 const Heroku = require('heroku-client');
 const s = require("../set");
 const axios = require("axios");
@@ -21,30 +21,30 @@ function runtime(seconds) {
 }
 
 // New loading animation with different symbols and larger progress bar
-async function loading(dest, zk) {
+async function loading(dest, hn) {
   const lod = [
     "⬛⬛⬜⬜⬜⬜⬛⬛꧁20%꧂",
     "⬛⬛⬛⬛⬜⬜⬜⬜꧁40%꧂",
     "⬜⬜⬛⬛⬛⬛⬜⬜꧁60%꧂",
     "⬜⬜⬜⬜⬛⬛⬛⬛꧁80%꧂",
     "⬛⬛⬜⬜⬜⬜⬛⬛꧁100%꧂",
-    "* 𝚃𝙸𝙼𝙽𝙰𝚂𝙰-𝙸𝚂-𝟿𝟿𝟿𝟿𝟿𝟿𝟿𝟿-ping-𝚂𝙿𝙴𝙴𝙳*"
+    "*ELITECHWIZ 𝐌𝐃-𝐒𝐏𝐄𝐄𝐃 𝐈𝐒⚔️🌟*"
   ];
 
-  let { key } = await zk.sendMessage(dest, { text: 'Loading Please Wait' });
+  let { key } = await hn.sendMessage(dest, { text: 'Loading Please Wait' });
 
   for (let i = 0; i < lod.length; i++) {
-    await zk.sendMessage(dest, { text: lod[i], edit: key });
+    await hn.sendMessage(dest, { text: lod[i], edit: key });
     await delay(500); // Adjust the speed of the animation here
   }
 }
 
-timoth({
+hango({
   nomCom: "alive",
   aliases: ["alive", "testing"],
   categorie: "system",
-  reaction: "🤟"
-}, async (dest, zk, commandeOptions) => {
+  reaction: "🌟"
+}, async (dest, hn, commandeOptions) => {
   const { ms } = commandeOptions;
 
   // Array of sound file URLs
@@ -64,7 +64,8 @@ timoth({
     'https://files.catbox.moe/wx8q6h.mp3',
     'https://files.catbox.moe/uj8fps.m4a',
     'https://files.catbox.moe/dc88bx.m4a',
-    'https://files.catbox.moe/tn32z0.m4a'
+    'https://files.catbox.moe/jy8ee7.mp3'
+    'https://files.catbox.moe/9j7rh2.mp3'
   ];
 
   // Randomly pick an audio file from the list
@@ -81,7 +82,7 @@ timoth({
     fileName: 'shizo',
     contextInfo: {
       externalAdReply: {
-        title: 'ᴛɪᴍɴᴀsᴀ ᴍᴜʟᴛɪᴘʟᴇ ᴅᴇᴠɪᴄᴇ ᴡᴀᴛsᴀᴘᴘ ʙᴏᴛ',
+        title: 'ELITECHWIZ 𝐌𝐃 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄 𝐀𝐋𝐋 𝐓𝐇𝐄 𝐓𝐈𝐌𝐄',
         body: conf.OWNER_NAME,
         thumbnailUrl: conf.URL,
         sourceUrl: conf.GURL, // Corrected variable name
@@ -92,15 +93,15 @@ timoth({
   };
 
   // Send the audio message with the context of the original message
-  await zk.sendMessage(dest, audioMessage, { quoted: ms });
+  await hn.sendMessage(dest, audioMessage, { quoted: ms });
 });
 
 
-timoth({
+hango({
   nomCom: 'restart2',
   aliases: ['reboot'],
   categorie: "system"
-}, async (chatId, zk, context) => {
+}, async (chatId, hn, context) => {
   const { repondre, superUser } = context;
 
   // Check if the user is a super user
@@ -128,10 +129,10 @@ timoth({
 
 
 // Command to retrieve Heroku config vars
-timoth({
-  nomCom: 'pallvar',
+hango({
+  nomCom: 'allvar',
   categorie: "system"
-}, async (chatId, zk, context) => {
+}, async (chatId, hn, context) => {
   const { repondre, superUser } = context;
 
   // Check if the command is issued by the owner
@@ -171,10 +172,10 @@ timoth({
 });
 
 // Command to set a Heroku config var
-timoth({
+hango({
   nomCom: 'setvar',
   categorie: "system"
-}, async (chatId, zk, context) => {
+}, async (chatId, hn, context) => {
   const { repondre, superUser, arg } = context;
 
   // Check if the command is issued by the owner
@@ -213,7 +214,7 @@ timoth({
   }
 });
 
-timoth({
+hango({
   nomCom: "shell",
   aliases: ["getcmd", "cmd"],
   reaction: '⚔️',
@@ -252,18 +253,18 @@ timoth({
   });
 });
 
-timoth(
+hango(
   {
-    nomCom: 'luning',
+    nomCom: 'ping1',
     aliases: ['speed', 'latency'],
     desc: 'To check bot response time',
     categorie: 'system', // Fixed the typo here (Categorie -> categorie)
-    reaction: '⚡',
+    reaction: '🌟',
     fromMe: true, // Removed quotes to make it a boolean
   },
-  async (dest, zk) => {
+  async (dest, hn) => {
     // Call the new loading animation without delaying the rest of the bot
-    const loadingPromise = loading(dest, zk);
+    const loadingPromise = loading(dest, hn);
 
     // Generate 3 ping results with large random numbers for a more noticeable effect
     const pingResults = Array.from({ length: 3 }, () => Math.floor(Math.random() * 10000 + 1000));
@@ -272,7 +273,7 @@ timoth(
     const formattedResults = pingResults.map(ping => `${conf.OWNER_NAME} 𝖘𝖕𝖊𝖊𝖉 ${ping} 𝐌/𝐒  `);
 
     // Send the ping results with the updated text and format
-    await zk.sendMessage(dest, {
+    await hn.sendMessage(dest, {
       text: `${formattedResults.join(', ')}`,
       contextInfo: {
         externalAdReply: {
@@ -294,25 +295,25 @@ timoth(
 );
 
 // React function if needed for further interaction
-function react(dest, zk, msg, reaction) {
-  zk.sendMessage(dest, { react: { text: reaction, key: msg.key } });
+function react(dest, hn, msg, reaction) {
+  hn.sendMessage(dest, { react: { text: reaction, key: msg.key } });
 }
 
-timoth({
-  nomCom: 'uptime',
+hango({
+  nomCom: 'uptime2',
   aliases: ['runtime', 'running'],
   desc: 'To check runtime',
   categorie: 'system', // Fixed the typo here (Categorie -> categorie)
-  reaction: '⏱️',
+  reaction: '⚔️',
   fromMe: true, // Removed quotes to make it a boolean
-}, async (dest, zk, commandeOptions) => {
+}, async (dest, hn, commandeOptions) => {
   const { ms, arg, repondre } = commandeOptions;
 
   // Get bot's runtime
   const botUptime = process.uptime(); // Get the bot uptime in seconds
 
   // Send uptime information to the user
-  await zk.sendMessage(dest, {
+  await hn.sendMessage(dest, {
     text: `*${conf.OWNER_NAME} UPTIME IS ${runtime(botUptime)}*`,
     contextInfo: {
       externalAdReply: {
@@ -333,21 +334,21 @@ timoth({
 });
 
 // React function to allow interaction after sending message
-function react(dest, zk, msg, reaction) {
-  zk.sendMessage(dest, { react: { text: reaction, key: msg.key } });
+function react(dest, hn, msg, reaction) {
+  hn.sendMessage(dest, { react: { text: reaction, key: msg.key } });
 }
 
 
-timoth({
+hango({
   nomCom: 'update',
   aliases: ['redeploy', 'sync'],
   categorie: "system"
-}, async (chatId, zk, context) => {
+}, async (chatId, hn, context) => {
   const { repondre, superUser } = context;
 
   // Check if the command is issued by the owner
   if (!superUser) {
-    return repondre("*This command is restricted to the bot owner or TIMNASA TMD owner 💀*");
+    return repondre("*This command is restricted to the bot owner or CASEYRHODES XMD owner 💀*");
   }
 
   // Ensure Heroku app name and API key are set
@@ -367,7 +368,7 @@ timoth({
         `https://api.heroku.com/apps/${herokuAppName}/builds`,
         {
           source_blob: {
-            url: "https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31",
+            url: "https://github.com/Keithkeizzah/ALPHA-MD/tarball/main",
           },
         },
         {
@@ -393,12 +394,12 @@ timoth({
   redeployApp();
 });
 
-timoth({
+hango({
   nomCom: "urlget",
   aliases: ["get", "find"],
   categorie: "system",
   reaction: '🛄',
-}, async (sender, zk, context) => {
+}, async (sender, hn, context) => {
   const { repondre: sendResponse, arg: args } = context;
   const urlInput = args.join(" ");
 
@@ -433,19 +434,19 @@ timoth({
     // Handle different content types
     if (/image\/.*/.test(contentType)) {
       // Send image message
-      await zk.sendMessage(sender, {
+      await hn.sendMessage(sender, {
         image: { url: fetchUrl },
         caption: `> > *${conf.BOT}*`
       }, { quoted: context.ms });
     } else if (/video\/.*/.test(contentType)) {
       // Send video message
-      await zk.sendMessage(sender, {
+      await hn.sendMessage(sender, {
         video: { url: fetchUrl },
         caption: `> > *${conf.BOT}*`
       }, { quoted: context.ms });
     } else if (/audio\/.*/.test(contentType)) {
       // Send audio message
-      await zk.sendMessage(sender, {
+      await hn.sendMessage(sender, {
         audio: { url: fetchUrl },
         caption: `> > *${conf.BOT}*`
       }, { quoted: context.ms });
@@ -461,7 +462,7 @@ timoth({
       }
     } else {
       // Send other types of documents
-      await zk.sendMessage(sender, {
+      await hn.sendMessage(sender, {
         document: { url: fetchUrl },
         caption: `> > *${conf.BOT}*`
       }, { quoted: context.ms });
@@ -471,3 +472,4 @@ timoth({
     sendResponse(`Error fetching data: ${error.message}`);
   }
 });
+

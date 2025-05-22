@@ -1,88 +1,93 @@
-const util = require('util');
-const fs = require('fs-extra');
-const { zokou } = require(__dirname + "/../framework/zokou");
-const { format } = require(__dirname + "/../framework/mesfonctions");
-const os = require("os");
+const axios = require("axios");
+const { timoth } = require(__dirname + "/../timnasa/timoth");
+const { format } = require(__dirname + "/../timnasa/mesfonctions");
+const os = require('os');
 const moment = require("moment-timezone");
-const s = require(__dirname + "/../set");
-const more = String.fromCharCode(8206)
-const readmore = more.repeat(4001)
+const conf = require(__dirname + "/../set");
 
-zokou({ nomCom: "repo", categorie: "General" }, async (dest, zk, commandeOptions) => {
-    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
-    let { cm } = require(__dirname + "/../framework//zokou");
-    var coms = {};
-    var mode = "public";
-    
-    if ((s.MODE).toLocaleLowerCase() != "yes") {
-        mode = "private";
-    }
+const readMore = String.fromCharCode(8206).repeat(4001);
 
+const formatUptime = (seconds) => {
+    seconds = Number(seconds);
+    const days = Math.floor(seconds / 86400);
+    const hours = Math.floor((seconds % 86400) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
 
-    
+    return [
+        days > 0 ? `${days} ${days === 1 ? "day" : "days"}` : '',
+        hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : '',
+        minutes > 0 ? `${minutes} ${minutes === 1 ? "minute" : "minutes"}` : '',
+        remainingSeconds > 0 ? `${remainingSeconds} ${remainingSeconds === 1 ? "second" : "seconds"}` : ''
+    ].filter(Boolean).join(', ');
+};
 
-    cm.map(async (com, index) => {
-        if (!coms[com.categorie])
-            coms[com.categorie] = [];
-        coms[com.categorie].push(com.nomCom);
-    });
-
-    moment.tz.setDefault('Etc/GMT');
-
-// Créer une date et une heure en GMT
-const temps = moment().format('HH:mm:ss');
-const date = moment().format('DD/MM/YYYY');
-
-  let infoMsg =  `
-          *𝚰𝚻 𝐊𝚫𝐉𝐔 𝚻𝚳𝐃 BOT INFO* 
-❒───────────────────❒
-
-*GITHUB LINK*
-> https://github.com/Next5x/IT_KAJU_TMD
-
-*CONTACT OWNER*
-> https://wa.me/255697423061
-
-*WHATSAPP CHANNEL*
->https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31
-⁠
-╭───────────────────❒
- │❒⁠⁠⁠⁠ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
- │❒⁠⁠⁠⁠ *DEV1* : *𝚰𝚻 𝐊𝚫𝐉𝐔 𝚻𝚳𝐃*
- │❒⁠⁠⁠⁠ *DEV2* : *𝚻𝚰𝚳𝚴𝚫𝐒𝚫 𝚻𝚳𝐃*
-⁠⁠⁠⁠╰───────────────────❒
-  `;
-    
-let menuMsg = `
-         *POWERED BY 𝚰𝚻 𝐊𝚫𝐉𝐔 𝚻𝚳𝐃*
-
-❒───────────────────❒`;
-
-   var lien = mybotpic();
-
-   if (lien.match(/\.(mp4|gif)$/i)) {
+// Fetch GitHub stats and multiply by 10
+const fetchGitHubStats = async () => {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+        const response = await axios.get("https://api.github.com/repos/Next5x/TIMNASA_TMD1");
+        const forksCount = response.data.forks_count * 11; 
+        const starsCount = response.data.stargazers_count * 11; 
+        const totalUsers = forksCount + starsCount; 
+        return { forks: forksCount, stars: starsCount, totalUsers };
+    } catch (error) {
+        console.error("Error fetching GitHub stats:", error);
+        return { forks: 0, stars: 0, totalUsers: 0 };
     }
-    catch (e) {
-        console.log("🤫🤫 Menu erreur " + e);
-        repondre("🤫🤫 Menu erreur " + e);
-    }
-} 
-// Vérification pour .jpeg ou .png
-else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
-    try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
-    }
-    catch (e) {
-        console.log("🤫🤫 Menu erreur " + e);
-        repondre("🤫🤫 Menu erreur " + e);
-    }
-} 
-else {
-    
-    repondre(infoMsg + menuMsg);
-    
-}
+};
 
-}); 
+timoth({
+    nomCom: "repo2",
+    aliases: ["script", "cs"],
+    reaction: '☢️',
+    nomFichier: __filename
+}, async (command, reply, context) => {
+    const { repondre, auteurMessage, nomAuteurMessage } = context;
+
+    try {
+        const response = await axios.get("https://api.github.com/repos/mr-X-force/LUCKY-MD-XBOT");
+        const repoData = response.data;
+
+        if (repoData) {
+            
+            const repoInfo = {
+                stars: repoData.stargazers_count * 11,
+                forks: repoData.forks_count * 11,
+                updated: repoData.updated_at,
+                owner: repoData.owner.login
+            };
+
+            const releaseDate = new Date(repoData.created_at).toLocaleDateString('en-GB');
+            const message = `
+            *Hello 👋 my friend ${nomAuteurMessage}*
+
+            *This is ${conf.BOT}*
+            the best bot in the universe developed by ${conf.OWNER_NAME}. Fork and give a star 🌟 to my repo!
+     ╭┈┈┈┈┈┈
+     ┋  *Stars:* - ${repoInfo.stars}
+     ┋  *Forks:* - ${repoInfo.forks}
+     ┋  *Release date:* - ${releaseDate}
+     ┋  *Repo:* - ${repoData.html_url}
+     ┋  *Owner:*   *${conf.OWNER_NAME}*
+     ╰┈┈┈┈┈┈`;
+
+        //Context to read forwarded info
+    const getContextInfo = (title = '', userJid = '') => ({
+    mentionedJid: [userJid],
+    forwardingScore: 999,
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: "120363313124070136@newsletter",
+      newsletterName: "©timnasa-tech",
+      serverMessageId: Math.floor(100000 + Math.random() * 900000),
+    },
+  });
+        } else {
+            console.log("Could not fetch data");
+            repondre("An error occurred while fetching the repository data.");
+        }
+    } catch (error) {
+        console.error("Error fetching repository data:", error);
+        repondre("An error occurred while fetching the repository data.");
+    }
+});
