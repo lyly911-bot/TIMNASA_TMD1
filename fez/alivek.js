@@ -33,11 +33,8 @@ timoth(
                     sourceUrl: "https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31",
                     mediaType: 1,
                     renderLargerThumbnail: true
-                }
-            }
-         });
-
-      console.log("Alive message sent successfully with customized layout.");
+                    );
+                      console.log("Alive message sent successfully with customized layout.");
     } catch (error) {
       console.error("Error sending Alive message:", error.message);
     }
