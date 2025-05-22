@@ -1,10 +1,10 @@
-const { zokou } = require("../framework/zokou");
+const { timoth } = require("../timnasa/timoth");
 const { generateProfilePicture } = require("axios");
 const { S_WHATSAPP_NET } = require('@whiskeysockets/baileys');
 const fs = require("fs");
 
-zokou({
-  nomCom: "fullpp",
+timoth({
+  nomCom: "setpp",
   aliases: ["updatepp", "ppfull"],
   reaction: '⚔️',
   categorie: "search"
