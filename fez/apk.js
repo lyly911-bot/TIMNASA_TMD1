@@ -1,4 +1,4 @@
-const {timoth} = require("../timnasa/timoth");
+const {zokou} = require("../framework/zokou");
 const fs = require('fs-extra');
 const conf = require('../set');
 const { default: axios } = require("axios");
@@ -6,7 +6,7 @@ const ffmpeg = require("fluent-ffmpeg");
 const gis = require('g-i-s');
 
 
-timoth({
+zokou({
   'nomCom': 'apk',
   'aliases': ['app', 'playstore'],
   'reaction': '🉑',
@@ -46,7 +46,7 @@ timoth({
         document: { url: appDetails.BK9.dllink },
         fileName: `${appDetails.BK9.name}.apk`,
         mimetype: "application/vnd.android.package-archive",
-        caption: "𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃"
+        caption: "𝚰𝚻 𝐊𝚫𝚴𝐉𝐔 𝚻𝚳𝐃"
       },
       { quoted: ms }
     );
