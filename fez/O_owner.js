@@ -1,8 +1,8 @@
-const { zokou } = require("../framework/zokou");  
+const { timoth } = require("../timnasa/timoth");  
 const { getAllSudoNumbers, isSudoTableNotEmpty } = require("../bdd/sudo");  
 const conf = require("../set");  
   
-zokou({ nomCom: "owner", categorie: "General", reaction: "⭐" }, async (dest, zk, commandeOptions) => {  
+timoth({ nomCom: "owner", categorie: "General", reaction: "⭐" }, async (dest, zk, commandeOptions) => {  
     const { ms, mybotpic } = commandeOptions;  
   
     const thsudo = await isSudoTableNotEmpty();  
@@ -55,7 +55,7 @@ zokou({ nomCom: "owner", categorie: "General", reaction: "⭐" }, async (dest, z
     }  
 });  
   
-zokou({ nomCom: "dev", categorie: "General", reaction: "⭐" }, async (dest, zk, commandeOptions) => {  
+timoth({ nomCom: "dev", categorie: "General", reaction: "⭐" }, async (dest, zk, commandeOptions) => {  
     const { ms, mybotpic } = commandeOptions;  
   
     const devs = [  
@@ -89,7 +89,7 @@ zokou({ nomCom: "dev", categorie: "General", reaction: "⭐" }, async (dest, zk,
     }  
 });  
   
-zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {  
+timoth({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {  
     const { ms, repondre, auteurMessage } = commandeOptions;  
   
     repondre("THANK YOU FOR CHOOSING 𝚰𝚻 𝐊𝚫𝐉𝐔 𝚻𝚳𝐃, HERE ARE OUR SUPPORTIVE LINKS\n\n ☉ CHANNEL LINK IS HERE ☉\n\n❒⁠⁠⁠⁠[https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31] \n\n ☉ GITHUB LINK IS HERE ☉\n\n❒⁠⁠⁠⁠[https://github.com/next55x/DILI_KANO_-] \n\n\nmade by dil kano");  
