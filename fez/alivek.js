@@ -15,26 +15,27 @@ timoth(
     const contactName = commandeOptions?.ms?.pushName || "Unknown Contact"; // Sender's name or "Unknown Contact"
 
     try {
-      // Send the custom message
-      await zk.sendMessage(dest, {
-        image: { url: fullImageUrl }, // Full image displayed at the top
-        caption: `💫 Always Active 🔥\n\n✨ Contact: ${contactName}\n🙏 [Visit Channel](${sourceUrl})`,
-        audio: { url: randomAudio }, // Voice note URL
-        mimetype: "audio/mpeg", // Correct MIME type for audio
-        ptt: true, // Send as a voice note
-        contextInfo: {
-          externalAdReply: {
-            title: `💦 Message from: ${contactName}\nᴛɪᴍɴᴀsᴀ-ᴛᴇᴄʜ ᴛᴍᴅ ɪs ᴀʟɪᴠᴇ ᴇᴠᴇʀʏᴅᴀʏ ᴇᴠᴇʀʏ ᴛɪᴍᴇ`, // Your contact in WhatsApp status format
-            body: "Yoh don't disturb am active🥱 Tap here",
-            thumbnailUrl: smallThumbnailUrl, // Small thumbnail displayed below
-            mediaType: 1, // Indicate this is an image
-            renderLargerThumbnail: true, // Ensure thumbnail is displayed in full
-            sourceUrl: sourceUrl, // Channel link
-            showAdAttribution: true, // Attribution for the channel
-          },
-          forwardingScore: -1, // Prevent message forwarding
-        }
-      });
+        await zk.sendMessage(dest, { 
+            image: { url: img },
+            caption: infoMsg + menuMsg,
+            contextInfo: {
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: "120363332512801418@newsletter",
+                    newsletterName: "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ",
+                    serverMessageId: -1
+                },
+                forwardingScore: 999,
+                externalAdReply: {
+                    title: "☢️𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃☢️",
+                    body: "🧃Command List",
+                    thumbnailUrl: imgs,
+                    sourceUrl: "https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31",
+                    mediaType: 1,
+                    renderLargerThumbnail: true
+                }
+            }
+         });
 
       console.log("Alive message sent successfully with customized layout.");
     } catch (error) {
