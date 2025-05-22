@@ -1,7 +1,7 @@
 //topu tech
 const {
-  zokou
-} = require("../framework/zokou");
+  timoth
+} = require("../timnasa/timoth");
 const capitalGame = [{
   'country': "Afghanistan",
   'capital': 'Kabul'
@@ -635,8 +635,8 @@ zokou({
   }
 });
 // Commande waifu
-zokou({
-  nomCom: "waifu",
+timoth({
+  nomCom: "zakode",
   categorie: "Weeb",
   reaction: "😏"
 },
@@ -659,8 +659,8 @@ async (origineMessage, zk, commandeOptions) => {
 });
 
 // Commande neko
-zokou({
-  nomCom: "neko",
+timotj({
+  nomCom: "gekopo",
   categorie: "Weeb",
   reaction: "😺"
 },
@@ -682,8 +682,8 @@ async (origineMessage, zk, commandeOptions) => {
 });
 
 // Commande shinobu
-zokou({
-  nomCom: "shinobu",
+timoth({
+  nomCom: "sinobu",
   categorie: "Weeb",
   reaction: "🦋"
 },
@@ -705,8 +705,8 @@ async (origineMessage, zk, commandeOptions) => {
 });
 
 // Commande megumin
-zokou({
-  nomCom: "megumin",
+timoth({
+  nomCom: "megumi",
   categorie: "Weeb",
   reaction: "💥"
 },
@@ -729,8 +729,8 @@ async (origineMessage, zk, commandeOptions) => {
 
 
 
-zokou({
-  nomCom: "cosplay",
+timoth({
+  nomCom: "posplay",
   categorie: "Weeb",
   reaction: "😏"
 },
@@ -756,7 +756,7 @@ async (origineMessage, zk, commandeOptions) => {
     repondre("je reçois malheureusement une erreur : " + e);
   }
 });
-zokou({
+timoth({
   nomCom: "forex",
   categorie: "trade-place",
   desc: "Fetches the latest forex news",
@@ -793,7 +793,7 @@ zokou({
     return repondre("*Failed to fetch forex news.*");
   }
 });
-zokou({
+timoth({
   nomCom: "fxstatus",
   categorie: "trade-place",
   desc: "Fetches the current status of the forex market",
@@ -847,7 +847,7 @@ zokou({
   }
 });
 
-zokou({
+timoth({
   nomCom: "fxpairs",
 aliases: ["forexpairs", "pairforex"],
   categorie: "trade-place",
@@ -877,7 +877,7 @@ aliases: ["forexpairs", "pairforex"],
   }
 });
 
-zokou({
+timoth({
   nomCom: "stocktickers",
   aliases: ["stockticks", "tickets"],
   categorie: "trade-place",
@@ -908,7 +908,7 @@ zokou({
   }
 });
 
-zokou({
+timoth({
   nomCom: "fxexchange",
   aliases: ["forexexchange", "exchangerate"],
   categorie: "trade-place",
@@ -938,7 +938,7 @@ zokou({
     return repondre("*Failed to fetch exchange rates.*");
   }
 });
-zokou({
+timoth({
   'nomCom': "guesscapital",
   'categorie': "Games"
 }, async (_0x4d7648, _0x864b53, _0x44ebdc) => {
