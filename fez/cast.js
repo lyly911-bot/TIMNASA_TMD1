@@ -1,8 +1,8 @@
-const {zokou} =require("../framework/zokou");
+const {timoth} =require("../timnasa/timoth");
 const axios =require("axios");
 
 
-zokou({ nomCom: "cast2",
+timoth({ nomCom: "cast2",
         reaction: "🎁",
         alias: ["bc"],
         desc: "Bot makes a broadcast in all groups",
@@ -34,9 +34,9 @@ zokou({ nomCom: "cast2",
                     isForwarded: false,
                     externalAdReply: {
                         title: 'Broadcast by ' + citel.pushName,
-                        body: tlang().title,
+                        body: tlang().title,'TIMNASA-CAST'
                         thumbnail: log0,
-                        mediaUrl: '',
+                        mediaUrl: 'https://whatsapp.com/channel/0029VajweHxKQuJP6qnjLM31',
                         mediaType: 2,
                         sourceUrl: gurl,
                         showAdAttribution: true,
