@@ -2,15 +2,15 @@ const util = require('util');
 
 const fs = require('fs-extra');
 
-const { timoth } = require(__dirname + "/../timnasa/timoth");
+const { timoth } = require(__dirname + "../timnasa/timoth");
 
-const { format } = require(__dirname + "/../timnasa/mesfonctions");
+const { format } = require(__dirname + "../timnasa/mesfonctions");
 
 const os = require("os");
 
 const moment = require("moment-timezone");
 
-const s = require(__dirname + "/../set");
+const s = require(__dirname + "../set");
 
 
 
