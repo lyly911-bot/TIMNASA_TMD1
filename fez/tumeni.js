@@ -4,7 +4,7 @@ const {
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 timoth({
-  'nomCom': "public",
+  'nomCom': "publicmenu",
   'categorie': "General"
 }, async (_0x32d997, _0x261f21, _0x35c1de) => {
   let {
@@ -38,9 +38,9 @@ timoth({
       _0x1e92e3 = "Good Night 🌌";
     }
   }
-  let _0x5027f1 = "╭───────────⊷\n┊▢ʙᴏᴛ ɴᴀᴍᴇ : *ɴᴊᴀʙᴜʟᴏ ᴊʙ*\n┊▢ᴘʀᴇғɪx : *[ " + s.PREFIXE + " ]*\n┊▢ᴍᴏᴅᴇ : *" + _0x2ee529 + "*\n┊▢ᴅᴀᴛᴇ : *" + _0x3fb484 + "*\n╰─┬────────┬⊷\n╭─┴────────┴⊷\n┊ ❍[0]•MENULIST\n┊ ❍[1]•MENU-AI\n┊ ❍[2]•MENU-GENERAL\n┊ ❍[3]•MENU-DONLOAD\n┊ ❍[4]•MENU-USE\n┊ ❍[5]•MENU-MOD\n┊ ❍[6]•MENU-FUN\n┊ ❍[7]•MENU-BOOKS\n┊ ❍[8]•MENU-SEARCH\n┊ ❍[9]•MENU-GROUP\n┊ ❍[10]•MENU-CONTROL\n╰─┬⊷\n╭─┴⊷ʀᴇᴘʟʏ ɴᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ10\n╰┬───────⊷⳹\n┌┤🌇 *Am say : " + _0x1e92e3 + "*\n┊╰─────────────⊷\n*╰⊷••ɴנαʙυʟσ ᴊв••──────⊷* ";
-  const _0x276cd7 = ["https://files.catbox.moe/nj1w1s.jpg", "https://files.catbox.moe/znvqsv.jpg", "https://files.catbox.moe/nj1w1s.jpg"];
-  const _0x866ebb = ["https://files.catbox.moe/znvqsv.jpg", "https://files.catbox.moe/nj1w1s.jpg", "https://files.catbox.moe/znvqsv.jpg"];
+  let _0x5027f1 = "╭───────────⊷\n┊▢ʙᴏᴛ ɴᴀᴍᴇ : *ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ*\n┊▢ᴘʀᴇғɪx : *[ " + s.PREFIXE + " ]*\n┊▢ᴍᴏᴅᴇ : *" + _0x2ee529 + "*\n┊▢ᴅᴀᴛᴇ : *" + _0x3fb484 + "*\n╰─┬────────┬⊷\n╭─┴────────┴⊷\n┊ ❍[0]•MENULIST\n┊ ❍[1]•MENU-AI\n┊ ❍[2]•MENU-GENERAL\n┊ ❍[3]•MENU-DONLOAD\n┊ ❍[4]•MENU-USE\n┊ ❍[5]•MENU-MOD\n┊ ❍[6]•MENU-FUN\n┊ ❍[7]•MENU-BOOKS\n┊ ❍[8]•MENU-SEARCH\n┊ ❍[9]•MENU-GROUP\n┊ ❍[10]•MENU-CONTROL\n╰─┬⊷\n╭─┴⊷ʀᴇᴘʟʏ ɴᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ10\n╰┬───────⊷⳹\n┌┤🌇 *Am say : " + _0x1e92e3 + "*\n┊╰─────────────⊷\n*╰⊷••ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ••──────⊷* ";
+  const _0x276cd7 = ["https://files.catbox.moe/7n8oyx.jpg", "https://files.catbox.moe/znvqsv.jpg", "https://files.catbox.moe/nj1w1s.jpg"];
+  const _0x866ebb = ["https://files.catbox.moe/8gkj9l.jpg", "https://files.catbox.moe/nj1w1s.jpg", "https://files.catbox.moe/znvqsv.jpg"];
   const _0x472af9 = Math.random() > 0.5;
   let _0x2f3579;
   let _0x135a79;
@@ -61,15 +61,15 @@ timoth({
           'url': _0x2f3579
         },
         'caption': _0x5027f1,
-        'footer': "*Njabulo Jb*, developed by Njabulo",
+        'footer': "*TimnasaTech*, developed by TimnasaKing",
         'gifPlayback': true,
         'contextInfo': {
           'externalAdReply': {
-            'title': "Njabulo Jb",
-            'body': "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
+            'title': "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ",
+            'body': "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
             'mediaType': 0x1,
             'thumbnailUrl': _0x135a79,
-            'sourceUrl': "https://github.com/NjabuloJ/Njabulo-Jb",
+            'sourceUrl': "https://github.com/Next5x/TIMNASA_TMD1",
             'showAdAttribution': true,
             [_0xad9813]: true
           }
@@ -83,14 +83,14 @@ timoth({
           'url': _0x2f3579
         },
         'caption': _0x5027f1,
-        'footer': "*Njabulo_Jb*, developed by Njabulo",
+        'footer': "*ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ*, developed by ᴛɪᴍɴᴀsᴀ",
         'contextInfo': {
           'externalAdReply': {
-            'title': "Njabulo Jb",
-            'body': "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
+            'title': "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ",
+            'body': "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
             'mediaType': 0x1,
             'thumbnailUrl': _0x135a79,
-            'sourceUrl': "https://github.com/NjabuloJ/Njabulo-Jb",
+            'sourceUrl': "https://github.com/Next5x/TIMNASA_TMD1",
             'showAdAttribution': true,
             [_0xad9813]: true
           }
@@ -103,7 +103,7 @@ timoth({
     console.log("🥵🥵 Error sending menu: " + _0x54a5d9);
     _0x20560f("🥵🥵 Error sending menu: " + _0x54a5d9);
   }
-  const _0x410b0b = ["https://files.catbox.moe/6x0rb7.mp3"];
+  const _0x410b0b = ["https://files.catbox.moe/i8ks0j.mp3"];
   const _0x5aa213 = _0x410b0b[Math.floor(Math.random() * _0x410b0b.length)];
   try {
     await _0x261f21.sendMessage(_0x32d997, {
@@ -114,11 +114,11 @@ timoth({
       'ptt': true,
       'contextInfo': {
         'externalAdReply': {
-          'title': "song menu",
-          'body': "ɴᴊᴀʙᴜʟᴏ ᴊʙ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
+          'title': "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ",
+          'body': "ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ",
           'mediaType': 0x1,
           'thumbnailUrl': _0x135a79,
-          'sourceUrl': "https://github.com/NjabuloJ/Njabulo-Jb",
+          'sourceUrl': "https://github.com/Next5x/TIMNASA_TMD1",
           'showAdAttribution': true,
           [_0xad9813]: true
         }
