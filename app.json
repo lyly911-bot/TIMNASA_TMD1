@@ -1,14 +1,14 @@
 {
-  "name": "✧⁠LUCKY_MD✧ MULT DEVICE",
-  "description": "Lucky Whatsapp device bot made by FrediEzra to help Whatsapp users to enjoy while helping...",
+  "name": "𝑇𝛪𝛭𝛮𝛥𝑆𝛥-𝑇𝛭𝐷 𝛭𝑈𝐿𝑇𝛪𝛲𝐿𝛯 𝐷𝛯𝛻𝛪𝐶𝛯",
+  "description": "ᴛɪᴍɴᴀsᴀ ᴡʜᴀᴛsᴀᴘᴘ ᴅᴇᴠɪᴄᴇ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ᴛɪᴍɴᴀsᴀᴛɪᴍᴏᴛʜ ᴛᴏ ʜᴇʟᴘ ᴡʜᴀᴛsᴀᴘᴘ ᴜsᴇʀs ᴛᴏ ᴇɴᴊᴏʏ ᴡʜɪʟᴇ ʜᴇʟᴘɪɴɢ......",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://files.catbox.moe/7irwqn.jpeg",
-  "repository": "https://github.com/Fred1e/LUCKY_MD",
+  "logo": "https://files.catbox.moe/yg0pb3.jpg",
+  "repository": "https://github.com/Next5x/TIMNASA_TMD1",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -71,12 +71,12 @@
     },
     "ANTI_CALL_TEXT": {
       "description": "Type your anticall message to always send when calls are declined.You can as well leave it blank",
-      "value": "",
+      "value": "hello my name ist timnasa now i'm busy",
       "required": false
     },
     "BOT_NAME": {
       "description": "you must give a name for you bot uhh??!!",
-      "value": "✧⁠LUCKY_MD✧",
+      "value": "✧⁠𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃✧",
       "required": false 
     },
     "CHAT_BOT": {
@@ -91,7 +91,7 @@
     },
     "HEROKU_API_KEY": {
       "description": "Insert your Heroku API key (required)",
-      "value": "",
+      "value": "𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -106,12 +106,12 @@
     },
     "OWNER_NAME": {
       "description": "don't you have a name bro.Insert your name here!!",
-      "value": "FrediEzra",
+      "value": "𝚻𝚰𝚳𝚴𝚫𝐒𝚫-𝚻𝚳𝐃",
       "required": false
     },
     "URL": {
       "description": "you must add your bot image url.Get your image url now and fill it here",
-      "value": "https://files.catbox.moe/7irwqn.jpeg",
+      "value": "https://files.catbox.moe/yg0pb3.jpg",
       "required": true
     },
     "AUTO_READ_MESSAGES": {
@@ -121,7 +121,7 @@
     },
     "NUMERO_OWNER": {
       "description": "Your phone number (exclude '+' and area code, e.g., '255752593977')",
-      "value": "255752593977",
+      "value": "255756469954",
       "required": false
     },
     "WARN_COUNT": {
@@ -136,7 +136,7 @@
     },
     "PRESENCE": {
       "description": "Mark your presence: 1 for online, 2 for typing, 3 for recording, or leave blank for real state",
-      "value": "1",
+      "value": "2",
       "required": false
     },
     "ANTI_DELETE_MESSAGE": {
