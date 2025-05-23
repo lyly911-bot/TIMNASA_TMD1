@@ -9,7 +9,7 @@ const getContextInfo = (_0x258510 = '', _0x297ad1 = '', _0x4f4404 = '') => ({
   'forwardingScore': 0x3e7,
   'isForwarded': true,
   'forwardedNewsletterMessageInfo': {
-    'newsletterJid': "120363345407274799@newsletter",
+    'newsletterJid': "120363332512801418@newsletter",
     'newsletterName': "𝚰𝚻 𝐊𝚫𝐉𝐔  𝚻𝚳𝐃",
     'serverMessageId': Math.floor(100000 + Math.random() * 900000)
   },
@@ -55,7 +55,7 @@ timoth({
   'nomCom': "play",
   'aliases': ["song", "playdoc", "audio", "mp3"],
   'categorie': "download",
-  'reaction': '🎸'
+  'reaction': '🎼'
 }, async (_0x46123e, _0x14ad1a, _0x2ee1ed) => {
   const {
     arg: _0x34cbb1,
