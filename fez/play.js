@@ -10,7 +10,7 @@ const getContextInfo = (_0x258510 = '', _0x297ad1 = '', _0x4f4404 = '') => ({
   'isForwarded': true,
   'forwardedNewsletterMessageInfo': {
     'newsletterJid': "120363332512801418@newsletter",
-    'newsletterName': "𝚰𝚻 𝐊𝚫𝐉𝐔  𝚻𝚳𝐃",
+    'newsletterName': "𝑇𝛪𝛭𝛮𝛥𝑆𝛥 𝑇𝛭𝐷 𝑆𝛩𝛮𝐺",
     'serverMessageId': Math.floor(100000 + Math.random() * 900000)
   },
   'externalAdReply': {
