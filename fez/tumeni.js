@@ -39,8 +39,8 @@ timoth({
     }
   }
   let _0x5027f1 = "╭───────────⊷\n┊▢ʙᴏᴛ ɴᴀᴍᴇ : *ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ*\n┊▢ᴘʀᴇғɪx : *[ " + s.PREFIXE + " ]*\n┊▢ᴍᴏᴅᴇ : *" + _0x2ee529 + "*\n┊▢ᴅᴀᴛᴇ : *" + _0x3fb484 + "*\n╰─┬────────┬⊷\n╭─┴────────┴⊷\n┊ ❍[0]•MENULIST\n┊ ❍[1]•MENU-AI\n┊ ❍[2]•MENU-GENERAL\n┊ ❍[3]•MENU-DONLOAD\n┊ ❍[4]•MENU-USE\n┊ ❍[5]•MENU-MOD\n┊ ❍[6]•MENU-FUN\n┊ ❍[7]•MENU-BOOKS\n┊ ❍[8]•MENU-SEARCH\n┊ ❍[9]•MENU-GROUP\n┊ ❍[10]•MENU-CONTROL\n╰─┬⊷\n╭─┴⊷ʀᴇᴘʟʏ ɴᴀᴍᴇ ᴄᴏᴍᴍᴀɴᴅs 1ᴛᴏ10\n╰┬───────⊷⳹\n┌┤🌇 *Am say : " + _0x1e92e3 + "*\n┊╰─────────────⊷\n*╰⊷••ᴛɪᴍɴᴀsᴀ ᴛᴍᴅ••──────⊷* ";
-  const _0x276cd7 = ["https://files.catbox.moe/7n8oyx.jpg", "https://files.catbox.moe/znvqsv.jpg", "https://files.catbox.moe/nj1w1s.jpg"];
-  const _0x866ebb = ["https://files.catbox.moe/8gkj9l.jpg", "https://files.catbox.moe/nj1w1s.jpg", "https://files.catbox.moe/znvqsv.jpg"];
+  const _0x276cd7 = ["https://files.catbox.moe/3zf823.jpg", "https://files.catbox.moe/3zf823.jpg", "https://files.catbox.moe/3zf823.jpg"];
+  const _0x866ebb = ["https://files.catbox.moe/7n8oyx.jpg", "https://files.catbox.moe/7n8oyx.jpg", "https://files.catbox.moe/7n8oyx.jpg"];
   const _0x472af9 = Math.random() > 0.5;
   let _0x2f3579;
   let _0x135a79;
