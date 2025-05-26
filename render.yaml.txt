@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: LUCKY-MD-XFORCE 
+    name: TIMNASA_TMD
     env: node
     region: singapore
     buildCommand: "yarn install"
