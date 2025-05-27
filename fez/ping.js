@@ -1,1 +1,52 @@
-function _0x8459(){const _0x45d4e1=['⚪\x20Pong:\x20','╭➤TIMNASA-TMD','6CxmtkI','log','232514yMjDPz','moment-timezone','120363332512801418@newsletter','320898bKgNzd','408216Bptysy','audio/mp4','❌\x20Error:\x20','General','1533928MjNdFb','ms\x0a📅\x20*Date:*\x20','format','75996ggbaQZ','20uYpIzf','9BCJDqh','ping','HH:mm:ss','1910InWaRM','DD/MM/YYYY','25839brbOBw','setDefault','TIMNASA-TMD','https://files.catbox.moe/11f9pe.mp3','sendMessage','https://files.catbox.moe/7n8oyx.jpg','\x0a⏰\x20*Time:*\x20','floor','2949142zEGMeK'];_0x8459=function(){return _0x45d4e1;};return _0x8459();}const _0x458fa9=_0x1034;(function(_0x3114c8,_0x2a2d66){const _0x51e017=_0x1034,_0x51ba20=_0x3114c8();while(!![]){try{const _0x2e4482=-parseInt(_0x51e017(0x1d7))/0x1+-parseInt(_0x51e017(0x1cc))/0x2*(parseInt(_0x51e017(0x1ca))/0x3)+parseInt(_0x51e017(0x1d0))/0x4+parseInt(_0x51e017(0x1d8))/0x5*(-parseInt(_0x51e017(0x1cf))/0x6)+parseInt(_0x51e017(0x1c7))/0x7+parseInt(_0x51e017(0x1d4))/0x8*(-parseInt(_0x51e017(0x1d9))/0x9)+parseInt(_0x51e017(0x1bd))/0xa*(parseInt(_0x51e017(0x1bf))/0xb);if(_0x2e4482===_0x2a2d66)break;else _0x51ba20['push'](_0x51ba20['shift']());}catch(_0x3c4590){_0x51ba20['push'](_0x51ba20['shift']());}}}(_0x8459,0x3ef2c));function _0x1034(_0x336811,_0x1ea394){const _0x8459d4=_0x8459();return _0x1034=function(_0x103450,_0x5a8ff2){_0x103450=_0x103450-0x1bb;let _0x5bbc1e=_0x8459d4[_0x103450];return _0x5bbc1e;},_0x1034(_0x336811,_0x1ea394);}const {timoth}=require(__dirname+'/../timnasa/timoth'),moment=require(_0x458fa9(0x1cd)),set=require(__dirname+'/../set');moment['tz'][_0x458fa9(0x1c0)](''+set['TZ']),timoth({'nomCom':_0x458fa9(0x1bb),'categorie':_0x458fa9(0x1d3)},async(_0x12a838,_0x2d8d4e,_0x1f0ba4)=>{const _0x20a77a=_0x458fa9;let {ms:_0x5d2f0c}=_0x1f0ba4;const {time:_0xb5466b,date:_0x4c687e}={'time':moment()[_0x20a77a(0x1d6)](_0x20a77a(0x1bc)),'date':moment()[_0x20a77a(0x1d6)](_0x20a77a(0x1be))},_0x4950ba=Math[_0x20a77a(0x1c6)](Math['random']()*0x64)+0x1;try{await _0x2d8d4e[_0x20a77a(0x1c3)](_0x12a838,{'audio':{'url':_0x20a77a(0x1c2)},'mimetype':_0x20a77a(0x1d1),'ptt':!![],'contextInfo':{'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0x20a77a(0x1ce),'newsletterName':_0x20a77a(0x1c9),'serverMessageId':0x8f},'forwardingScore':0x3e7,'externalAdReply':{'title':_0x20a77a(0x1c1),'body':_0x20a77a(0x1c8)+_0x4950ba+_0x20a77a(0x1d5)+_0x4c687e+_0x20a77a(0x1c5)+_0xb5466b,'thumbnailUrl':_0x20a77a(0x1c4),'mediaType':0x1,'renderSmallThumbnail':!![]}}},{'quoted':_0x5d2f0c});}catch(_0x1149fe){console[_0x20a77a(0x1cb)]('❌\x20Ping\x20Command\x20Error:\x20'+_0x1149fe),repondre(_0x20a77a(0x1d2)+_0x1149fe);}});
+const {
+  timoth
+} = require(__dirname + '/../timnasa/timoth');
+const moment = require("moment-timezone");
+const set = require(__dirname + '/../set');
+moment.tz.setDefault('' + set.TZ);
+timoth({
+  'nomCom': "ping",
+  'categorie': "General"
+}, async (_0x12a838, _0x2d8d4e, _0x1f0ba4) => {
+  let {
+    ms: _0x5d2f0c
+  } = _0x1f0ba4;
+  const {
+    time: _0xb5466b,
+    date: _0x4c687e
+  } = {
+    'time': moment().format("HH:mm:ss"),
+    'date': moment().format("DD/MM/YYYY")
+  };
+  const _0x4950ba = Math.floor(Math.random() * 0x64) + 0x1;
+  try {
+    await _0x2d8d4e.sendMessage(_0x12a838, {
+      'audio': {
+        'url': "https://files.catbox.moe/x706d8.mp3"
+      },
+      'mimetype': "audio/mp4",
+      'ptt': true,
+      'contextInfo': {
+        'isForwarded': true,
+        'forwardedNewsletterMessageInfo': {
+          'newsletterJid': "120363332512801418@newsletter",
+          'newsletterName': "╭➤TIMNASA-TMD",
+          'serverMessageId': 0x8f
+        },
+        'forwardingScore': 0x3e7,
+        'externalAdReply': {
+          'title': "TIMNASA-TMD",
+          'body': "⚪ Pong: " + _0x4950ba + "ms\n📅 *Date:* " + _0x4c687e + "\n⏰ *Time:* " + _0xb5466b,
+          'thumbnailUrl': "https://files.catbox.moe/7n8oyx.jpg",
+          'mediaType': 0x1,
+          'renderSmallThumbnail': true
+        }
+      }
+    }, {
+      'quoted': _0x5d2f0c
+    });
+  } catch (_0x1149fe) {
+    console.log("❌ Ping Command Error: " + _0x1149fe);
+    repondre("❌ Error: " + _0x1149fe);
+  }
+});
