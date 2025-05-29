@@ -1,8 +1,8 @@
-const { fana } = require('../njabulo/fana');
+const { timoth } = require('../timnasa/timoth');
 const { attribuerUnevaleur } = require('../bdd/welcome');
 
 async function events(nomCom) {
-    fana({
+    timoth({
         nomCom: nomCom,
         categorie: 'Group'
     }, async (dest, zk, commandeOptions) => {
