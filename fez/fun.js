@@ -1,7 +1,7 @@
 
-const { fana } = require('../njabulo/fana');
+const { timoth } = require('../timnasa/timoth');
 
-fana({
+timoth({
   nomCom: "happi",
   categorie: "Fun",
   reaction: "😂"
@@ -29,7 +29,7 @@ fana({
     repondre("❌ *Error!* " + error.message);
   }
 });
-fana({
+timoth({
   nomCom: "heart",
   aliases: ["moyo", "hrt"],
   categorie: "Fun",
@@ -58,7 +58,7 @@ fana({
     repondre("❌ *Error!* " + error.message);
   }
 });
-fana({
+timoth({
   nomCom: "angry",
   categorie: "Fun",
   reaction: "🥺"
@@ -86,7 +86,7 @@ fana({
     repondre("❌ *Error!* " + error.message);
   }
 });
-fana({
+timoth({
   nomCom: "sad",
   aliases: ["heartbroken", "hrtbroken"],
   categorie: "Fun",
@@ -115,7 +115,7 @@ fana({
     repondre("❌ *Error!* " + error.message);
   }
 });
-fana({
+timoth({
   nomCom: "shy",
   aliases: ["shyoff", "shyy"],
   categorie: "Fun",
@@ -144,7 +144,7 @@ fana({
     repondre("❌ *Error!* " + error.message);
   }
 });
-fana({
+timoth({
   nomCom: "moon",
   aliases: ["mon", "mwezi"],
   categorie: "Fun",
@@ -174,7 +174,7 @@ fana({
   }
 });
 
-fana({
+timoth({
   nomCom: "nikal",
   categorie: "Fun",
   reaction: "⁉️"
@@ -204,7 +204,7 @@ fana({
   }
 });
 
-fana({
+timoth({
   nomCom: "hand",
   categorie: "Fun",
   reaction: "👊"
