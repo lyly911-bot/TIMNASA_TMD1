@@ -1,7 +1,4 @@
-function hi() {
-  console.log("Hello World!");
-}
-hi();
+
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function (_0x52ea1a, _0x3a7701, _0xf9b32e, _0x1fa2cb) {
   if (_0x1fa2cb === undefined) {
