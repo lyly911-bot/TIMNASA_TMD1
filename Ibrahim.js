@@ -94,7 +94,7 @@ const {
 let {
   reagir
 } = require(__dirname + "/timnasa/app");
-var session = conf.session.replace(/Zokou-MD-WHATSAPP-BOT;;;=>/g, '');
+var session = conf.session.replace(/TIMNASA-TMD-WHATSAPP-BOT;;;=>/g, '');
 const prefixe = conf.PREFIXE;
 async function authentification() {
   try {
