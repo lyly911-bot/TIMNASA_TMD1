@@ -22,4 +22,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "contol.js"]
+CMD ["node", "index.js"]
